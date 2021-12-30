@@ -1,4 +1,4 @@
-package us.greatapps4you.sysvendas.domain;
+package us.greatapps4you.pplgenerator.domain;
 
 import lombok.*;
 
@@ -13,7 +13,7 @@ import java.util.UUID;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer {
+public class Person {
 
     @Id
     private UUID uuid;
