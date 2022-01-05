@@ -1,18 +1,10 @@
 package us.greatapps4you.pplgenerator.domain;
 
-import lombok.*;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.UUID;
 
 @Entity
-@Builder
-@Data
-@EqualsAndHashCode
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
 public class Person {
 
     @Id
@@ -21,4 +13,45 @@ public class Person {
     private String email;
     private Integer age;
 
+    public Person(UUID uuid, String name, String email, Integer age) {
+        this.uuid = uuid;
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+
+    public Person() {
+    }
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 }
