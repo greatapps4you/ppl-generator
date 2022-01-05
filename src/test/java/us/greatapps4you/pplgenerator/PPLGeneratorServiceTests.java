@@ -1,17 +1,22 @@
 package us.greatapps4you.pplgenerator;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import us.greatapps4you.pplgenerator.domain.Person;
 import us.greatapps4you.pplgenerator.service.PPLGeneratorServiceImpl;
 
 import java.util.List;
 
-@Disabled("Disabled for Java 11 adaptations")
-@SpringBootTest(classes = Main.class)
+@ExtendWith(SpringExtension.class)
+@ActiveProfiles("test")
+@EnableAutoConfiguration
+@ContextConfiguration(classes = {PPLGeneratorServiceImpl .class})
 class PPLGeneratorServiceTests {
 
 	@Autowired
