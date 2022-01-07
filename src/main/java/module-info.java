@@ -12,7 +12,6 @@ module pplgenerator {
     opens us.greatapps4you.pplgenerator.rest to spring.beans;
     opens us.greatapps4you.pplgenerator.repository to spring.beans;
     opens us.greatapps4you.pplgenerator.service to spring.beans;
-    //opens us.greatapps4you.pplgenerator.service to us.greatapps4you.pplgenerator;
 
     exports us.greatapps4you.pplgenerator;
     exports us.greatapps4you.pplgenerator.domain;
